@@ -19,6 +19,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-      serviceAccountName: <KSA_NAME>
+      serviceAccountName: 260900167482-compute@developer.gserviceaccount.com
       nodeSelector:
         iam.gke.io/gke-metadata-server-enabled: "true"
