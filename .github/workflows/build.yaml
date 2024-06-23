@@ -25,5 +25,5 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
         gcloud auth asia-northeast1-docker.pkg.dev
-        docker build -t asia-northeast1-docker.pkg.dev/keima-akito-build-shop/demo/nginx:latest .
-        docker push asia-northeast1-docker.pkg.dev/keima-akito-build-shop/demo/nginx:latest
+        docker build -t asia-northeast1-docker.pkg.dev/$GOOGLE_PROJECT/demo/nginx:latest .
+        docker push asia-northeast1-docker.pkg.dev/$GOOGLE_PROJECT/demo/nginx:latest
