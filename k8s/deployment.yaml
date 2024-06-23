@@ -19,5 +19,5 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-      serviceAccountName: github-actions
+      serviceAccountName: ksa-helloapp
         iam.gke.io/gke-metadata-server-enabled: "true"
