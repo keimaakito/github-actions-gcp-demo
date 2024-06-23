@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: hello-app-cloud-spanner
-        image: us-docker.pkg.dev/google-samples/containers/gke/hello-app-cloud-spanner
+        ##image: us-docker.pkg.dev/google-samples/containers/gke/hello-app-cloud-spanner
+        image: asia-northeast1-docker.pkg.dev/keima-akito-build-shop/demo/nginx:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
