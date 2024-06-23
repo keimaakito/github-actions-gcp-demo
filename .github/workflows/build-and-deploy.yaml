@@ -36,5 +36,7 @@ jobs:
         gcloud container clusters get-credentials autopilot-cluster-1 --region asia-northeast1
         sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" resources.yaml
         ##kubectl apply -f resources.yaml
-        kubectl apply -f k8s/deployment.yaml
+        ##kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f k8s/deployment.yaml -n=hello-namespace
+
         
