@@ -20,4 +20,5 @@ spec:
         ports:
         - containerPort: 8080
       serviceAccountName: "ksa-helloapp"
+      nodeSelector:
         iam.gke.io/gke-metadata-server-enabled: "true"
