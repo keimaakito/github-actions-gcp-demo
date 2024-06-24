@@ -3,6 +3,7 @@ By keimaakito@ aka Mauricio Letelier mletelierc at gmail.com
 
 Considerations of the project:
 1. Deployed to Google cloud platform, used a test applicatino from Google, deployed a containerized web application to a Google Kubernetes Engine (GKE) Autopilot cluster, and use a Google Spanner database in the backend to store data. The sample application manages a table of game players. You can add and delete players through the app's graphical user interface (GUI).
+2. The database was initialized as per the sample app, now tested with some sample records.
 
 Endpoint is now live and finally deployed at 
 
@@ -25,6 +26,9 @@ For monitoring and logging everything is built in into the GCP components, the b
 As per security so far the consideration used is not storing any keys in the config files in git, rather use github variables for the secrets.
 Also did not automatically run the service.yaml part of the GCP deployment in order to not deploy by default the application, did it manually.
 But the project can be modified to allow it from the start if needed.
+
+In short flow of the pipeline is:
+push the code -> githubaction build, deploy to gcp registry -> deployment to eks cluster ->  publish to a service and endpoint, accessible from public internet.
 
 
 
